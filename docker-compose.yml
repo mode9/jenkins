@@ -42,7 +42,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      ./config:/etc/nginx/conf.d
+      - ./config:/etc/nginx/conf.d
     depends_on:
       - myjenkins-blueocean
 
