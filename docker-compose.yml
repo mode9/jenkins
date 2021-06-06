@@ -33,18 +33,18 @@ services:
     depends_on:
       - jenkins-docker
 
-    nginx:
-      container_name: jenkine-server
-      image: nginx:latest
-      restart: always
-      networks:
-        - jenkins
-      ports:
-        - "80:80"
-      volume:
-        ./config:/etc/nginx/conf.d
-      depends_on:
-        - myjenkins-blueocean
+  nginx:
+    container_name: jenkine-server
+    image: nginx:latest
+    restart: always
+    networks:
+      - jenkins
+    ports:
+      - "80:80"
+    volume:
+      ./config:/etc/nginx/conf.d
+    depends_on:
+      - myjenkins-blueocean
 
 
 volumes:
