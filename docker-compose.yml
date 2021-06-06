@@ -4,6 +4,7 @@ services:
     container_name: jenkins-docker
     image: docker:dind
     privileged: true
+    restart: always
     networks:
       - jenkins
     environment:
@@ -18,6 +19,7 @@ services:
   myjenkins-blueocean:
     container_name: jenkins-blueocean
     image: myjenkins-blueocean:1.1
+    restart: always
     networks:
       - jenkins
     environment:
